@@ -40,14 +40,10 @@ public class TaskMenu {
         }
 
         private void createTaskMenu() {
-// ask the description
             System.out.println("Please introduce task description:");
             var description = scanner.nextLine().trim();
-//            create the task object
             var taskToStore = new Task(description);
-//            call the service
             var storedTask = taskService.create(taskToStore);
-//            print the result with the created object
             System.out.printf("A new task has been created with id: %s," +
                     " with description: %s, and status: %s. \n",
                     storedTask.getId(), storedTask.getDescription(), storedTask.getStatus());

@@ -14,7 +14,7 @@ public class TaskService {
     private TaskRepository taskRepository;
 
     public Task create(Task task){
-        return taskRepository.create(task);
+        return taskRepository.save(task);
     }
 
     public List<Task> findAll(){
@@ -24,7 +24,7 @@ public class TaskService {
     public Task updateStatus(Long id){
         var task = taskRepository.getById(id);
         task.changeStatus();
-        return taskRepository.update(task);
+        return taskRepository.save(task);
     }
 
 }
