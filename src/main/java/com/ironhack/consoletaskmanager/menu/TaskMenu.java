@@ -33,10 +33,10 @@ public class TaskMenu {
                         readAllTasksMenu();
                 case "UPDATE" ->
                         updateStatusMenu();
+                case "EXIT" -> System.out.println("Exiting the program, see you soon!");
                 case default -> System.out.println("Please pick a valid option");
             }
         } while (!answer.equals("EXIT"));
-        System.out.println("Exiting the program, see you soon!");
         }
 
         private void createTaskMenu() {
