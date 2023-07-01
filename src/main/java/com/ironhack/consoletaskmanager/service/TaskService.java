@@ -26,7 +26,7 @@ public class TaskService {
     public Task updateStatus(Long id){
         var task = taskRepository.getById(id);
         task.changeStatus();
-        return taskRepository.save(task);
+       return task;
     }
 
 }
