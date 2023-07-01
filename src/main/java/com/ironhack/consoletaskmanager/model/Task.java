@@ -26,10 +26,10 @@ public class Task {
     }
 
     public void changeStatus(){
-        if (status == TaskStatus.DONE){
-            status = TaskStatus.TODO;
-        } else if(status == TaskStatus.TODO){
-            status = TaskStatus.DONE;
+        if (status.equals(TaskStatus.DONE)){
+            setStatus(TaskStatus.TODO);
+        } else if(status.equals(TaskStatus.TODO)){
+            setStatus(TaskStatus.DONE);
         }
     }
 }
